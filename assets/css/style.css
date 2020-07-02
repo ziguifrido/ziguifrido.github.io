@@ -1,12 +1,93 @@
-
-.wrapper > .header {
-    background-color: gray;
+body {
+    background-color: #282a36;
+    color: #f8f8f2;
 }
 
-.btn-black {
-    color: gray !important;
+.header {
+    margin-top: 10px !important;
 }
 
-.btn-black:hover {
-    color: darkgray !important;
+.header, hr {
+    margin-top: 0;
+    margin-bottom: 5%;
 }
+
+a.brand {
+    text-decoration: none;
+    color: #f8f8f2;
+    text-align: left;
+    vertical-align: middle;
+}
+
+a.brand:hover {
+    color: #f1fa8c;
+}
+
+.title {
+    margin-bottom: 10%;
+}
+
+a.link {
+    text-decoration: none;
+    color: #f8f8f2;
+    text-align: right;
+    vertical-align: middle;
+}
+
+a.link:hover {
+    color: #f1fa8c;
+}
+
+a.hyperlink {
+    text-decoration: none;
+    font-weight: bold;
+    color: #8be9fd;
+}
+
+a.hyperlink:hover {
+    color: #f1fa8c;
+}
+
+.avatar {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.icon {
+    color: #8be9fd;
+    font-size: 10ch;
+}
+
+.icon:hover {
+    color: #f1fa8c;    
+}
+
+.icon-group {
+    margin-top: 5rem;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.projects > .row {
+    margin-bottom: 100px;
+}
+
+.description {
+    text-align:justify;
+}
+
+.print-img { 
+    display:inline-block;
+    text-align:center;
+}
+
+.content {
+    min-height: calc(100vh - 70px);
+}
+
+.footer {
+    height: 50px;
+    text-align: center;
+}
+
+
