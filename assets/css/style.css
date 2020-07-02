@@ -1,0 +1,12 @@
+
+.wrapper > .header {
+    background-color: gray;
+}
+
+.btn-black {
+    color: gray !important;
+}
+
+.btn-black:hover {
+    color: darkgray !important;
+}
