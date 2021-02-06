@@ -1,5 +1,63 @@
+:root {
+  /* Dark Mode */
+  --text-primary-dark: #fff;
+  --text-secondary-dark: rgba(255, 255, 255, 0.7);
+  --text-disabled-dark: rgba(255, 255, 255, 0.5);
+  --action-active-dark: #fff;
+  --action-hover-dark: rgba(255, 255, 255, 0.08);
+  --action-selected-dark: rgba(255, 255, 255, 0.16);
+  --action-disabled-dark: rgba(255, 255, 255, 0.3);
+  --action-disabledBackground-dark: rgba(255, 255, 255, 0.12);
+  --background-default-dark: #303030;
+  --background-paper-dark: #424242;
+  --divider-dark: rgba(255, 255, 255, 0.12);
+  /* Light Mode */
+  --text-primary-light: rgba(0, 0, 0, 0.87);
+  --text-secondary-light: rgba(0, 0, 0, 0.54);
+  --text-disabled-light: rgba(0, 0, 0, 0.38);
+  --action-active-light: rgba(0, 0, 0, 0.54);
+  --action-hover-light: rgba(0, 0, 0, 0.04);
+  --action-selected-light: rgba(0, 0, 0, 0.08);
+  --action-disabled-light: rgba(0, 0, 0, 0.26);
+  --action-disabledBackground-light: rgba(0, 0, 0, 0.12);
+  --background-default-light: #fafafa;
+  --background-paper-light: #fff;
+  --divider-light: rgba(0, 0, 0, 0.12);
+}
+
+.toogle-on-desktop, 
+.toogle-on-mobile, 
+.toogle-off-desktop, 
+.toogle-off-mobile {
+  font-size: 40px !important;
+  vertical-align: middle !important;
+}
+
 @media (max-width: 750px) {
 
+  body .toogle-on-mobile {
+    display: none;
+  }
+  
+  body .toogle-off-mobile {
+    display: initial;
+  }
+  
+  body.dark .toogle-on-mobile {
+    display: initial;
+  }
+  
+  body.dark .toogle-off-mobile {
+    display: none;
+  }
+
+  body .toogle-on-desktop,
+  body .toogle-off-desktop,
+  body.dark .toogle-on-desktop,
+  body.dark .toogle-off-desktop {
+    display: none;
+  }
+  
   .menu-icon>i {
     font-size: 40px;
     margin-bottom: 10px;
@@ -40,15 +98,35 @@
     margin-right: 35px;
     text-decoration: none;
     line-height: 6.5rem;
-    color: #8be9fd;
   }
 
-  .navbar-link.active, .navbar-link:hover {
-    color: #f1fa8c;
-  }
 }
 
 @media (min-width: 750px) {
+
+  body .toogle-on-desktop {
+    display: none;
+  }
+  
+  body .toogle-off-desktop {
+    display: initial;
+  }
+  
+  body.dark .toogle-on-desktop {
+    display: initial;
+  }
+  
+  body.dark .toogle-off-desktop {
+    display: none;
+  }
+
+  body .toogle-on-mobile,
+  body .toogle-off-mobile,
+  body.dark .toogle-on-mobile,
+  body.dark .toogle-off-mobile {
+    display: none;
+  }
+
   .menu-icon>i {
     display: none;
   }
@@ -59,7 +137,6 @@
     display: block;
     width: 100%;
     height: 6.5rem;
-    background: #282a36;
     z-index: 99;
     border-top: none;
     border-bottom: none;
@@ -87,9 +164,35 @@
     margin-right: 35px;
     text-decoration: none;
     line-height: 6.5rem;
-    color: #8be9fd;
   }
-  .navbar-link.active, .navbar-link:hover {
-    color: #f1fa8c;
-  }
+}
+
+/*  --------------------------- COLORS ------------------------------------- */
+
+/* light */
+
+body .navbar-link {
+  color: var(--action-active-light);
+}
+
+body .navbar-link.active, body .navbar-link:hover {
+  color: var(--action-selected-light);
+}
+
+body hr {
+  color: var(--divider-light);
+}
+
+/* dark */
+
+body.dark .navbar-link {
+  color: var(--action-active-dark);
+}
+
+body.dark .navbar-link.active, body.dark .navbar-link:hover {
+  color: var(--action-selected-dark);
+}
+
+body hr {
+  color: var(--divider-dark);
 }

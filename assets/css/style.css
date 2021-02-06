@@ -1,6 +1,38 @@
+:root {
+    /* Dark Mode */
+    --text-primary-dark: #fff;
+    --text-secondary-dark: rgba(255, 255, 255, 0.7);
+    --text-disabled-dark: rgba(255, 255, 255, 0.5);
+    --action-active-dark: #fff;
+    --action-hover-dark: rgba(255, 255, 255, 0.08);
+    --action-selected-dark: rgba(255, 255, 255, 0.16);
+    --action-disabled-dark: rgba(255, 255, 255, 0.3);
+    --action-disabledBackground-dark: rgba(255, 255, 255, 0.12);
+    --background-default-dark: #303030;
+    --background-paper-dark: #424242;
+    --divider-dark: rgba(255, 255, 255, 0.12);
+    /* Light Mode */
+    --text-primary-light: rgba(0, 0, 0, 0.87);
+    --text-secondary-light: rgba(0, 0, 0, 0.54);
+    --text-disabled-light: rgba(0, 0, 0, 0.38);
+    --action-active-light: rgba(0, 0, 0, 0.54);
+    --action-hover-light: rgba(0, 0, 0, 0.04);
+    --action-selected-light: rgba(0, 0, 0, 0.08);
+    --action-disabled-light: rgba(0, 0, 0, 0.26);
+    --action-disabledBackground-light: rgba(0, 0, 0, 0.12);
+    --background-default-light: #fafafa;
+    --background-paper-light: #fff;
+    --divider-light: rgba(0, 0, 0, 0.12);
+}
+
 body {
-    background-color: #282a36;
-    color: #f8f8f2;
+    background-color: var(--background-default-light);
+    color: var(--text-primary-light);
+}
+
+body.dark {
+    background-color: var(--background-default-dark);
+    color: var(--text-primary-dark);
 }
 
 .container {
@@ -17,40 +49,23 @@ body {
     margin-bottom: 5%;
 }
 
-a.brand {
-    text-decoration: none;
-    color: #f8f8f2;
-    text-align: left;
-    vertical-align: middle;
-}
-
-a.brand:hover {
-    color: #f1fa8c;
-}
-
 .title {
     margin-bottom: 10%;
 }
 
 a.link {
     text-decoration: none;
-    color: #f8f8f2;
     text-align: right;
     vertical-align: middle;
 }
 
 a.link:hover {
-    color: #f1fa8c;
+    color: #f1fa8c;    
 }
 
 a.hyperlink {
     text-decoration: none;
     font-weight: bold;
-    color: #8be9fd;
-}
-
-a.hyperlink:hover {
-    color: #f1fa8c;
 }
 
 .avatar {
@@ -59,12 +74,15 @@ a.hyperlink:hover {
 }
 
 .icon {
-    color: #8be9fd;
     font-size: 10ch;
 }
 
-.icon:hover {
-    color: #f1fa8c;    
+.icon>i:hover {
+    transform: scale(1.2);
+}
+
+.icon>i:active {
+    transform: scale(0.8);
 }
 
 .icon-group {
@@ -101,4 +119,43 @@ a.hyperlink:hover {
     .me {
         max-width: 50%;
     }
+}
+
+
+/*  --------------------------- COLORS ------------------------------------- */
+
+/* light */
+
+body a.link {
+    color: var(--action-active-light);
+}
+
+body a.hyperlink {
+    color: var(--action-active-light);
+}
+
+body .icon {
+    color: var(--action-active-light);
+}
+
+body .icon:hover {
+    color: var(--action-hover-light);    
+}
+
+/* dark */
+
+body.dark a.link {
+    color: var(--action-active-dark);
+}
+
+body.dark a.hyperlink {
+    color: var(--action-active-dark);
+}
+
+body.dark .icon {
+    color: var(--action-active-dark);
+}
+
+body.dark .icon:hover {
+    color: var(--action-hover-dark);    
 }

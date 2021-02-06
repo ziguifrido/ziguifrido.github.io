@@ -30,8 +30,10 @@
       <div class="header">
         <nav class="navbar">
           <div class="container">
-            <div class="menu-icon" onclick="ToggleMenu()">
-              <i class="fa fa-bars"></i>
+            <div class="menu-icon">
+              <i class="fa fa-bars" onclick="ToggleMenu()"></i>
+              <i class="fa fa-toggle-on toogle-on-mobile u-pull-right" onclick="ToggleDarkMode('light')"></i>
+              <i class="fa fa-toggle-off toogle-off-mobile u-pull-right" onclick="ToggleDarkMode('dark')"></i>
             </div>
             <ul class="navbar-list">
               <li class="navbar-item">
@@ -48,6 +50,12 @@
                 <li class="navbar-item">
                   <a class="navbar-link" href="https://ko-fi.com/ziguifrido" target="_blank">
                      <i class="fa fa-coffee"> Buy me a coffee!</i>
+                  </a>
+                </li>
+                <li class="navbar-item">
+                  <a href="#" class="navbar-link" >
+                    <i class="fa fa-toggle-on toogle-on-desktop" onclick="ToggleDarkMode('light')"></i>
+                    <i class="fa fa-toggle-off toogle-off-desktop" onclick="ToggleDarkMode('dark')"></i>
                   </a>
                 </li>
               </div>
