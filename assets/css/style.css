@@ -3,6 +3,11 @@ body {
     color: #f8f8f2;
 }
 
+.container {
+    max-width: 80%;
+    max-width: 1400px;
+}
+
 .header {
     margin-top: 10px !important;
 }
@@ -49,7 +54,7 @@ a.hyperlink:hover {
 }
 
 .avatar {
-    width: 150px;
+    width: 125px;
     border-radius: 50%;
 }
 
@@ -74,6 +79,7 @@ a.hyperlink:hover {
 
 .description {
     text-align:justify;
+    text-justify: inter-word;
 }
 
 .print-img { 
@@ -91,3 +97,8 @@ a.hyperlink:hover {
 }
 
 
+@media (min-width: 750px) {
+    .me {
+        max-width: 50%;
+    }
+}
