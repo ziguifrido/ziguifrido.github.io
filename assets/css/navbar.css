@@ -175,8 +175,16 @@ body .navbar-link {
   color: var(--action-active-light);
 }
 
-body .navbar-link.active, body .navbar-link:hover {
+body .navbar-link.active {
   color: var(--action-selected-light);
+  background-color:var(--background-paper-light);
+  border-radius: 10%;
+  padding:1em;
+  cursor: default;
+}
+
+body .navbar-link:hover {
+  color: var(--action-hover-light);
 }
 
 body hr {
@@ -189,8 +197,16 @@ body.dark .navbar-link {
   color: var(--action-active-dark);
 }
 
-body.dark .navbar-link.active, body.dark .navbar-link:hover {
+body.dark .navbar-link.active {
   color: var(--action-selected-dark);
+  background-color:var(--background-paper-dark);
+  border-radius: 10%;
+  padding:1em;
+  cursor: default;
+}
+
+body.dark .navbar-link:hover {
+  color: var(--action-hover-dark);
 }
 
 body hr {
